@@ -1,10 +1,18 @@
-import { LoginButton } from "@/components/buttons";
+import { LoginButton } from "@/components/loginButton";
+import { getServerSession } from "next-auth/next";
+import { redirect } from "next/navigation";
 
-export default function SignIn() {
+export default async function SignIn() {
+	const session = await getServerSession();
+
+	if (session) {
+		redirect("/");
+	}
+
 	return (
 		<section>
-			<h1>Sign In</h1>
-			<LoginButton />
+			<LoginButton providerName="google" />
+			<LoginButton providerName="github" />
 		</section>
 	);
 }

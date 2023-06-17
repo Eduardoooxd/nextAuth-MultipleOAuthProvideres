@@ -6,7 +6,7 @@ export default async function ProtectedClientPage() {
 	const session = await getServerSession(options);
 
 	if (!session) {
-		redirect("/signIn?callbackUrl=/protected");
+		redirect("/signIn?callbackUrl=/protected/server");
 	}
 
 	return (

@@ -7,7 +7,7 @@ export default function ProtectedClientPage() {
 	const { data: session, status } = useSession({
 		required: true,
 		onUnauthenticated() {
-			redirect("/signIn?callbackUrl=/protected");
+			redirect("/signIn?callbackUrl=/protected/client");
 		},
 	});
 

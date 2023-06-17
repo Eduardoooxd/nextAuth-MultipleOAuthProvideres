@@ -7,7 +7,7 @@ const EnvironmentVariablesSchema = z.object({
 	GOOGLE_CLIENT_ID: z.string(),
 	GOOGLE_CLIENT_SECRET: z.string(),
 	// TODO REMOVE OPTIONAL
-	DATABASE_URL: z.string().url().optional(),
+	//DATABASE_URL: z.string().url().optional(),
 });
 
 export const ENVIRONMENT_VARIABLES = EnvironmentVariablesSchema.parse(

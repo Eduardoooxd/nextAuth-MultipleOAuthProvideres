@@ -16,7 +16,4 @@ export const options = {
 			clientSecret: GOOGLE_CLIENT_SECRET,
 		}),
 	],
-	pages: {
-		signIn: "/signIn",
-	},
 };
