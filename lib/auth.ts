@@ -20,4 +20,16 @@ export const options: NextAuthOptions = {
 			clientSecret: GOOGLE_CLIENT_SECRET,
 		}),
 	],
+	callbacks: {
+		async session({ session, user, token }) {
+			console.log("session", session);
+			console.log("user", user);
+			console.log("token", token);
+			if (session.user) {
+				// ** Add custom params to user in session which are added in `jwt()` callback via `token` parameter
+			}
+
+			return session;
+		},
+	},
 };
