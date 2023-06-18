@@ -7,7 +7,7 @@
 		"build": "yarn prisma:deploy && next build",
 		"start": "next start",
 		"lint": "next lint",
-		"prisma:deploy": "npx prisma generate && prisma migrate deploy",
+		"prisma:deploy": "prisma generate && prisma migrate deploy",
 		"supabase:init": "supabase init"
 	},
 	"dependencies": {
