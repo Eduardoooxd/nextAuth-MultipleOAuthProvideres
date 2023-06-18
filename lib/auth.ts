@@ -21,6 +21,7 @@ export const options: NextAuthOptions = {
 		}),
 	],
 	callbacks: {
+		// TODO REMOVE THIS
 		async session({ session, user, token }) {
 			console.log("session", session);
 			console.log("user", user);
