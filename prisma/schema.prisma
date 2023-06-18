@@ -5,6 +5,9 @@ generator client {
 datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
+
+  // Enabling this, when using MYSql with PlanetScale DB.
+  relationMode = "prisma"
 }
 
 model Account {
