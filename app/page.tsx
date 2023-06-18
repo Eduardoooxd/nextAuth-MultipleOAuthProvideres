@@ -1,9 +1,10 @@
 import { LogoutButton, ProfileButton } from "@/components/buttons";
+import { options } from "@/lib/auth";
 import { getServerSession } from "next-auth/next";
 import Link from "next/link";
 
 export default async function Home() {
-	const session = await getServerSession();
+	const session = await getServerSession(options);
 
 	return (
 		<main className="flex flex-col gap-x-8">
